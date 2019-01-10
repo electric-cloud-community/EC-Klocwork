@@ -1,0 +1,65 @@
+<editor>
+    <help>/commander/pages/@PLUGIN_NAME@/@PLUGIN_KEY@_help?s=Administration&amp;ss=Plugins#runKwbuildproject</help>
+    <formElement>
+        <type>entry</type>
+        <label>Klocwork root:</label>
+        <property>klocroot</property>
+        <required>1</required>
+        <documentation>Root directory on which Klocwork's files are stored, otherwise default will be assumed</documentation>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Verbose mode</label>
+        <property>verbose</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <required>0</required>
+        <value>0</value>
+        <documentation>Displays output information about program execution.</documentation>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Force</label>
+        <property>force</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <required>0</required>
+        <value>1</value>
+        <documentation>Run the build even if the tables directory specified with --tables-directory contains data files from the previous run.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>License host:</label>
+        <property>licenseHost</property>
+        <required>0</required>
+        <documentation>Sets License Server host (default: localhost).</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>License Port:</label>
+        <property>licensePort</property>
+        <required>0</required>
+        <documentation>Sets the license server port (default: 27000).</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Tables directory:</label>
+        <property>tablesDir</property>
+        <required>1</required>
+        <documentation>Specifies the location where you want to store the project's tables</documentation>
+    </formElement>
+    <formElement>
+        <type>textarea</type>
+        <label>Extra commands:</label>
+        <property>kwbuildprojectCommands</property>
+        <required>0</required>
+        <documentation>Commands to be entered when executing kwbuildproject.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Working directory:</label>
+        <property>workingDir</property>
+        <required>0</required>
+        <documentation>Working directory</documentation>
+    </formElement>
+</editor>

@@ -1,0 +1,48 @@
+<editor>
+    <help>/commander/pages/@PLUGIN_NAME@/@PLUGIN_KEY@_help?s=Administration&amp;ss=Plugins#runKwinject</help>
+    <formElement>
+        <type>entry</type>
+        <label>Klocwork root:</label>
+        <property>klocroot</property>
+        <required>0</required>
+        <documentation>Root directory on which Klocwork's files are stored, otherwise default will be assumed</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Kwinject shell script:</label>
+        <property>Kwinjectshellscript</property>
+        <required>0</required>
+        <documentation>Absolute path to the script (in case you build with a shell script)</documentation>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Debug</label>
+        <property>kwinjectDebug</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <required>0</required>
+        <value>1</value>
+        <documentation>Displays debug information.</documentation>
+    </formElement>
+    <formElement>
+        <type>textarea</type>
+        <label>Extra commands:</label>
+        <property>kwinjectCommands</property>
+        <required>0</required>
+        <documentation>Commands to be entered when executing kwinject.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Output file:</label>
+        <property>kwinject_output_file</property>
+        <required>0</required>
+        <documentation>Writes the build specification to file. By default, the build specification is written to kwinject.out in the current working directory. This option cannot be used with the --trace-out option.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Working directory:</label>
+        <property>workingDir</property>
+        <required>0</required>
+        <documentation>Working directory</documentation>
+    </formElement>
+</editor>

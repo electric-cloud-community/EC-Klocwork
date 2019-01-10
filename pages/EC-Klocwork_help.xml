@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="generator"
+          content="HTML Tidy for Windows (vers 14 February 2006), see www.w3.org" />
+    <meta content="text/html; charset=us-ascii"
+          http-equiv="content-type" />
+
+    <title>ElectricFlow Plugin for Klocwork</title>
+    <link rel="stylesheet" href= "../../plugins/@PLUGIN_KEY@/pluginhelp.css" type="text/css" media= "screen" />
+</head>
+
+<body>
+    <div class="help">
+    <h1>Klocwork</h1>
+    <p>Plugin Version @PLUGIN_VERSION@</p>
+    <hr style="margin-left: -10px; margin-top: 10px; height: 1px; width: 100%; color: #5981BD;" noshade="noshade" />
+	<p>Revised on July 1, 2015</p>
+    <p>Klocwork provides source code analysis tools that boost
+    development productivity.<br />
+     Klocwork's static analysis technology identifies security
+    vulnerabilities and reliability defects, optimize their peer
+    code review process, and enable developers to create more
+    maintainable code.</p>
+
+    <h2>Klocwork Links</h2>
+
+    <p>More information can be found at
+    <a href="http://www.klocwork.com/">this website</a>.</p>
+
+    <h2>ElectricFlow Integration to Klocwork</h2>
+
+    <p>The plugin calls the Klocwork kwinject, kwadmin and
+    kwbuildproject command line and passes the user-provided
+    parameters to perform klocwork task like:</p>
+
+    <ul>
+        <li>Create, Delete or Load projects</li>
+
+        <li>Create a build specification.</li>
+
+        <li>Run the integration build analysis.</li>
+    </ul>After finishing our postp feature will catch the most
+    common errors and easily detect errors.
+
+    <h2>Integrated Version</h2>
+
+    <p>This plugin was developed and tested against version 9.2</p>
+
+    <h1>Plugin Procedures</h1>
+	<p>IMPORTANT: In the ElectricFlow UI, from the Home page, open the Main Menu, and click <b>Admin</b> > <b>Plugins</b> to open the Plugin Manager.</p>
+    <p>
+        IMPORTANT: For all parameter descriptions below, required
+        parameters are shown in <span class='required'>bold
+        italics</span>.
+    </p>
+
+    <div
+         id="runKwinject">
+        <a name='runKwinject'
+             id="runKwinject"></a> 
+
+        <h3>runKwinject</h3>
+
+        <p>The runKwinject procedure creates and executes a command
+        line from the parameters you provide in the procedure
+        form.<br />
+         The main goal of kwinject is to create a build
+        specification for a C/C++ project</p>
+
+        <table class="grid">
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+
+                    <th>Description</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class='required'>Klocwork root</td>
+
+                    <td>Root directory on which Klocwork's files
+                    are stored, otherwise default will be
+                    assumed.</td>
+                </tr>
+
+                <tr>
+                    <td>Kwinject shell script</td>
+
+                    <td>Absolute path to the script (in case you
+                    build with a shell script).</td>
+                </tr>
+
+                <tr>
+                    <td>Debug</td>
+
+                    <td>Displays debug information (This is the
+                    command-line '--debug' option).</td>
+                </tr>
+
+                <tr>
+                    <td>Extra commands</td>
+
+                    <td>Commands to be entered when executing the
+                    command line.</td>
+                </tr>
+
+                <tr>
+                    <td>Output file</td>
+
+                    <td>Writes the build specification to file. By
+                    default, the build specification is written to
+                    kwinject.out in the current working directory
+                    (This is the command-line '-o' option).<br />
+                     This option cannot be used with the
+                    <b>--trace-out</b> option.</td>
+                </tr>
+
+                <tr>
+                    <td>Working directory</td>
+
+                    <td>Directory from which you want to run
+                    klocwork.</td>
+                </tr>
+            </tbody>
+        </table><img src="../../plugins/@PLUGIN_KEY@/images/Klocwork-1.png"
+             alt="screenshot" />
+    </div>
+
+    <div
+         id="AdminProject">
+        <a name='AdminProject'
+             id="AdminProject"></a> 
+
+        <h3>AdminProject</h3>
+
+        <p>The AdminProject procedure allows you to create, delete
+        and load projects</p>
+
+        <table class="grid">
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+
+                    <th>Description</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class='required'>Klocwork root</td>
+
+                    <td>Root directory on which Klocwork's files
+                    are stored, otherwise default will be
+                    assumed.</td>
+                </tr>
+
+                <tr>
+                    <td class='required'>Kwadmin action</td>
+
+                    <td>Choose the action for kwadmin to perform.
+                    Available options are: Create project, Load
+                    project and Delete project</td>
+                </tr>
+
+                <tr>
+                    <td class='required'>Project name</td>
+
+                    <td>Name of the project that will be created,
+                    deleted or loaded depending on the previous
+                    option.</td>
+                </tr>
+
+                <tr>
+                    <td class='required'>Language</td>
+
+                    <td>Specify one or more languages of the source
+                    code for this project. Valid arguments are c,
+                    cxx, csharp and java. Multiple arguments can be
+                    specified, separated by a comma (for example
+                    language c,java) (This is the command-line
+                    '--language' option).</td>
+                </tr>
+
+                <tr>
+                    <td>Verbose mode</td>
+
+                    <td>Displays output information about program
+                    execution (This is the command-line '--verbose'
+                    option).</td>
+                </tr>
+
+                <tr>
+                    <td class='required'>Tables directory</td>
+
+                    <td>Specifies the location where you want to
+                    take/store the project's tables.</td>
+                </tr>
+
+                <tr>
+                    <td>Working directory</td>
+
+                    <td>Directory from which you want to run
+                    klocwork.</td>
+                </tr>
+            </tbody>
+        </table><img src="../../plugins/@PLUGIN_KEY@/images/Klocwork-2.png"
+             alt="screenshot" />
+    </div>
+
+    <div
+         id="runKwbuildproject">
+        <a name='runKwbuildproject'
+             id="runKwbuildproject"></a> 
+
+        <h3>runKwbuildproject</h3>
+
+        <p>The runKwbuildproject procedure allows you to run the
+        klocwork integration build analysis</p>
+
+        <table class="grid">
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+
+                    <th>Description</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class='required'>Klocwork root</td>
+
+                    <td>Root directory on which Klocwork's files
+                    are stored, otherwise default will be
+                    assumed.</td>
+                </tr>
+
+                <tr>
+                    <td>Verbose mode</td>
+
+                    <td>Displays output information about program
+                    execution (This is the command-line '-v'
+                    option).</td>
+                </tr>
+
+                <tr>
+                    <td>Force</td>
+
+                    <td>Run the build even if the tables directory
+                    specified with --tables-directory contains data
+                    files from the previous run (This is the
+                    command-line '-f' option).</td>
+                </tr>
+
+                <tr>
+                    <td>License host</td>
+
+                    <td>Sets License Server host (default:
+                    localhost) (This is the command-line '-H='
+                    option).</td>
+                </tr>
+
+                <tr>
+                    <td>License Port</td>
+
+                    <td>Sets the license server port (default:
+                    27000) (This is the command-line '-P='
+                    option).</td>
+                </tr>
+
+                <tr>
+                    <td class='required'>Tables directory</td>
+
+                    <td>Specifies the location where you want to
+                    take/store the project's tables (This is the
+                    command-line '--tables-directory' option).</td>
+                </tr>
+
+                <tr>
+                    <td>Extra commands</td>
+
+                    <td>Commands to be entered when executing the
+                    command line.</td>
+                </tr>
+
+                <tr>
+                    <td>Working directory</td>
+
+                    <td>Directory from which you want to run
+                    klocwork.</td>
+                </tr>
+            </tbody>
+        </table><img src="../../plugins/@PLUGIN_KEY@/images/Klocwork-3.png"
+             alt="screenshot" />
+    </div>
+
+    <h1>Examples and Use Cases</h1>
+
+    <h2>runKwinject Parameter
+    form</h2><img src="../../plugins/@PLUGIN_KEY@/images/Klocwork-1.png"
+          alt="screenshot" /> 
+
+    <h2>AdminProject Parameter
+    form</h2><img src="../../plugins/@PLUGIN_KEY@/images/Klocwork-2.png"
+          alt="screenshot" /> 
+
+    <h2>runKwbuildproject Parameter
+    form</h2><img src="../../plugins/@PLUGIN_KEY@/images/Klocwork-3.png"
+          alt="screenshot" />
+
+    <h1>Release Notes</h1>
+	    <h2>EC-Klocwork 2.0.3</h2>    <ul>		<li>Renamed ElectricCommander to ElectricFlow.</li>    </ul>
+    <h2>EC-Klocwork 2.0.2</h2>
+
+    <ul>
+		<li>Procedure name(s) were changed in the step picker section</li>
+    </ul>
+	
+    <h2>@PLUGIN_KEY@-@PLUGIN_VERSION@</h2>
+
+    <ul>
+        <li>XML Parameter panels for procedures were added</li>
+
+        <li>Help page was changed</li>
+
+        <li>Code improvements</li>
+    </ul>
+
+    <h2>EC-Klocwork 1.0.1</h2>
+
+    <ul>
+        <li>Code Improvements</li>
+
+        <li>The options Kwinject, Create project, Build project,
+        Load project, and Delete project were separated in
+        diferents procedures</li>
+    </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<editor>
+    <help>/commander/pages/@PLUGIN_NAME@/@PLUGIN_KEY@_help?s=Administration&amp;ss=Plugins#AdminProject</help>
+    <formElement>
+        <type>entry</type>
+        <label>Klocwork root:</label>
+        <property>klocroot</property>
+        <required>1</required>
+        <documentation>Root directory on which Klocwork's files are stored, otherwise default will be assumed</documentation>
+    </formElement>
+    <formElement>
+        <type>select</type>
+        <label>Kwadmin action:</label>
+        <property>action</property>
+        <required>1</required>
+        <documentation>Defines the action to perform.</documentation>
+        <option><name>Create project</name><value>create-project</value></option>
+        <option><name>Load project</name><value>load</value></option>
+        <option><name>Delete project</name><value>delete-project</value></option>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Project name:</label>
+        <property>klocworkProjectName</property>
+        <required>1</required>
+        <documentation>Name of the project that will be created, deleted or loaded.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Language:</label>
+        <property>language</property>
+        <required>1</required>
+        <documentation>Specify one or more languages of the source code for this project. Valid arguments are c, cxx, csharp and java. Multiple arguments can be specified, separated by a comma (for example language c,java).</documentation>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Verbose mode</label>
+        <property>verbose</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <required>0</required>
+        <value>1</value>
+        <documentation>Displays output information about program execution.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Tables directory:</label>
+        <property>tablesDir</property>
+        <required>1</required>
+        <documentation>Specifies the location where you want to store the project's tables</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Working directory:</label>
+        <property>workingDir</property>
+        <required>0</required>
+        <documentation>Working directory</documentation>
+    </formElement>
+</editor>
