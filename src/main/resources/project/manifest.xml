@@ -1,0 +1,35 @@
+<?xml version='1.0' standalone='yes'?>
+<fileset>
+  <file>
+    <path>klocworkAdminDriver.pl</path>
+    <xpath>//property[propertyName=&quot;klocworkAdminDriver&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>klocworkBuildProjectDriver.pl</path>
+    <xpath>//property[propertyName=&quot;klocworkBuildProjectDriver&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>klocworkInjectDriver.pl</path>
+    <xpath>//property[propertyName=&quot;klocworkInjectDriver&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>postp_matchers.pl</path>
+    <xpath>//property[propertyName=&quot;klocwork_matchers&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>forms/runKwinject.xml</path>
+    <xpath>//procedure[procedureName=&quot;runKwinject&quot;]/propertySheet/property[propertyName=&quot;ec_parameterForm&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>forms/runKwbuildproject.xml</path>
+    <xpath>//procedure[procedureName=&quot;runKwbuildproject&quot;]/propertySheet/property[propertyName=&quot;ec_parameterForm&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>forms/AdminProject.xml</path>
+    <xpath>//procedure[procedureName=&quot;AdminProject&quot;]/propertySheet/property[propertyName=&quot;ec_parameterForm&quot;]/value</xpath>
+  </file>
+  <file>
+    <path>ec_setup.pl</path>
+    <xpath>//property[propertyName=&quot;ec_setup&quot;]/value</xpath>
+  </file>
+</fileset>
