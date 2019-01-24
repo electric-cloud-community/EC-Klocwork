@@ -314,20 +314,25 @@
           alt="screenshot" />
 
     <h1>Release Notes</h1>
-	    <h2>EC-Klocwork 2.0.3</h2>    <ul>		<li>Renamed ElectricCommander to ElectricFlow.</li>    </ul>
+    <h2>EC-Klocwork 2.0.4</h2>
+    <ul>
+        <li>Added metadata that is required for 9.0 release.</li>
+    </ul>
+	<h2>EC-Klocwork 2.0.3</h2>
+    <ul>
+        <li>Renamed ElectricCommander to ElectricFlow.</li>
+    </ul>
     <h2>EC-Klocwork 2.0.2</h2>
 
     <ul>
 		<li>Procedure name(s) were changed in the step picker section</li>
     </ul>
 	
-    <h2>@PLUGIN_KEY@-@PLUGIN_VERSION@</h2>
+    <h2>@PLUGIN_KEY@-2.0.1</h2>
 
     <ul>
         <li>XML Parameter panels for procedures were added</li>
-
         <li>Help page was changed</li>
-
         <li>Code improvements</li>
     </ul>
 
